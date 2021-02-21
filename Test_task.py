@@ -8,9 +8,9 @@ def func(n):
   for i in range(0, n):
     arrays.append([random.randint(1, 2 * n) for k in range(random.randint(1, 2 * n))])  #наполняю главный массив
     lengthes.append(len(arrays[i]))                                                     #наполняю массив размеров
-    if lengthes .count(lengthes[i]) != 1:                                               #условие на разные размеры
+    if lengthes.count(lengthes[i]) != 1:                                               #условие на разные размеры
       arrays[i] = [random.randint(1, 2 * n) for k in range(1, 2 * n + i + 2)]  #переписываю нужные элементы с другим размером, определяемым предыдущими результатами (рандомными, поэтому этот размер тоже технически рандомный)
-      lengthes [i] = len(arrays[i])                                                     #переписываю элемент размера
+      lengthes[i] = len(arrays[i])                                                     #переписываю элемент размера
 
   print('размеры массивов:', lengthes, '\n')  #чисто для удобства, так наглядно видно что размеры массивов разные
 
